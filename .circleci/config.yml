@@ -35,7 +35,6 @@ jobs:
       - run:
         name: "Print World"
         command: "echo world"
-      - requires: [print-hello]
         
 
 # Invoke jobs via workflows
@@ -46,3 +45,5 @@ workflows:
       - say-hello
       - print-hello
       - print-world
+          requires:
+            - print_hello
